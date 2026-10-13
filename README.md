@@ -35,7 +35,7 @@ It's one service, a Railway volume, and a TCP proxy for players.
 
 **Create a server.** Go to **Market**, pick a Minecraft template (for example "[PaperMC] Minecraft 26.1.2"), choose the normal (non-Docker) install, then press **Start**. On its first start the server stops and asks you to accept [Mojang's EULA](https://aka.ms/MinecraftEULA). To accept it, open **File Management**, set `eula=true` in `eula.txt`, and start the server again.
 
-**Memory.** The market templates start Java with `-Xms4096M -Xmx4096M`. If you want a smaller server, lower these numbers under **Instance Settings → Startup Command** before you start it. Railway bills the memory actually used, which is about 2 GB for a fresh world.
+**Memory.** The market templates start Java with `-Xms4096M -Xmx4096M`. If you want a smaller server, lower these numbers under **Instance Settings → Startup Command** before you start it. Railway bills the memory actually used: the panel alone idles at about 150 MB, and a fresh Paper world adds about 2 GB.
 
 **Join.** Players connect to the address under Settings → Networking → TCP Proxy (something like `xyz.proxy.rlwy.net:12345`). It's also in the deploy logs, on the line starting "players join at". The proxy points at port 25565, which is the port the first server uses by default.
 
