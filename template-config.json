@@ -1,0 +1,56 @@
+{
+  "services": {
+    "c0848470-a9a7-45a4-b8d8-6de943ed2e4c": {
+      "icon": "https://raw.githubusercontent.com/nomideusz/mcsmanager-railway/main/icon.png",
+      "name": "MCSManager",
+      "build": {
+        "dockerfilePath": "Dockerfile"
+      },
+      "deploy": {
+        "startCommand": null,
+        "healthcheckPath": "/",
+        "restartPolicyType": "ON_FAILURE",
+        "restartPolicyMaxRetries": 10
+      },
+      "source": {
+        "repo": "https://github.com/nomideusz/mcsmanager-railway",
+        "rootDirectory": "/"
+      },
+      "variables": {
+        "MCSM_ADMIN_PASSWORD": {
+          "defaultValue": "Mc${{secret(20)}}7",
+          "isOptional": false,
+          "description": "Password for the panel's 'admin' login, set on first boot only (9-36 chars with a-z, A-Z and 0-9) - change it in the panel afterwards"
+        },
+        "MCSM_LANGUAGE": {
+          "defaultValue": "en_us",
+          "isOptional": false,
+          "description": "Panel language on first boot: en_us, zh_cn, zh_tw, ja_jp, ko_kr, de_de, fr_fr, es_es, pt_br, ru_ru, th_th, tr_tr - change it later in Settings"
+        },
+        "PORT": {
+          "defaultValue": "8080",
+          "isOptional": false,
+          "description": "Port the panel listens on behind the Railway domain - leave as is"
+        },
+        "RAILWAY_DEPLOYMENT_DRAINING_SECONDS": {
+          "defaultValue": "90",
+          "isOptional": false,
+          "description": "Time to save worlds and stop servers cleanly on redeploy"
+        }
+      },
+      "networking": {
+        "serviceDomains": {
+          "<hasDomain>": {}
+        },
+        "tcpProxies": {
+          "25565": {}
+        }
+      },
+      "volumeMounts": {
+        "c0848470-a9a7-45a4-b8d8-6de943ed2e4c": {
+          "mountPath": "/data"
+        }
+      }
+    }
+  }
+}

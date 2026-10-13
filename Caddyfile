@@ -1,0 +1,20 @@
+{
+	admin off
+	# Hides boot notices Railway shows as warnings; proxy errors still get logged.
+	log {
+		level ERROR
+	}
+	servers {
+		# TLS ends at Railway's edge; trust its X-Forwarded-For to find the client.
+		trusted_proxies static 0.0.0.0/0 ::/0
+	}
+}
+
+:{$PORT} {
+	# The daemon strips its /daemon prefix itself (console websocket, uploads, downloads).
+	reverse_proxy /daemon* 127.0.0.1:24444
+	# The panel bans an IP after failed logins: give it the real one, not 127.0.0.1.
+	reverse_proxy 127.0.0.1:23333 {
+		header_up X-Real-IP {client_ip}
+	}
+}
