@@ -3,7 +3,7 @@
   "short_name": "MCSManager",
   "description": "Minecraft server panel: one-click Paper, Fabric, Forge; web console, files",
   "category": "Other",
-  "image": "https://raw.githubusercontent.com/nomideusz/mcsmanager-railway/main/icon.png",
+  "image": "https://raw.githubusercontent.com/two-workspaces/mcsmanager/main/icon.png",
   "card_desc": "MCSManager, the popular multi-user game server panel: install Paper, Fabric, Forge or NeoForge from its app market and run them from a web console with file manager and schedules.",
   "id": "af550700-c778-46eb-bf9a-7e2ca42c49b9",
   "published": true

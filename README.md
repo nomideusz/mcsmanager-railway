@@ -27,7 +27,7 @@ It's one service, a Railway volume, and a TCP proxy for players.
 
 - [MCSManager documentation](https://docs.mcsmanager.com/)
 - [MCSManager on GitHub](https://github.com/MCSManager/MCSManager)
-- [Template source on GitHub](https://github.com/nomideusz/mcsmanager-railway)
+- [Template source on GitHub](https://github.com/two-workspaces/mcsmanager)
 
 ### Implementation Details
 

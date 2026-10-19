@@ -1,7 +1,7 @@
 {
   "services": {
     "c0848470-a9a7-45a4-b8d8-6de943ed2e4c": {
-      "icon": "https://raw.githubusercontent.com/nomideusz/mcsmanager-railway/main/icon.png",
+      "icon": "https://raw.githubusercontent.com/two-workspaces/mcsmanager/main/icon.png",
       "name": "MCSManager",
       "build": {
         "dockerfilePath": "Dockerfile"
@@ -13,7 +13,7 @@
         "restartPolicyMaxRetries": 10
       },
       "source": {
-        "repo": "https://github.com/nomideusz/mcsmanager-railway",
+        "repo": "https://github.com/two-workspaces/mcsmanager",
         "rootDirectory": "/"
       },
       "variables": {
